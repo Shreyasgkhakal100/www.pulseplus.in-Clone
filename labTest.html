@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Pulse Pharmacy | Order Medicines from India&#39;s most-trusted Pharmacy
+    </title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      body {
+        font-family: "Roboto", sans-serif;
+        background-color: #f5f8fa;
+        background-color: #f5f8fa;
+      }
+      /* #mainPage {
+        border: 3px solid black;
+        width: 100%;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f5f8fa;
+      } */
+      .firstHalf {
+        width: 75%;
+        margin: auto;
+        border: 1px solid green;
+        background-color: white;
+      }
+
+      #searchBar {
+        border: 1px solid red;
+        margin: 2px;
+        margin: auto;
+        margin-top: 7%;
+        width: 85%;
+        display: flex;
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+
+      .searchText {
+        width: 90%;
+        height: 30px;
+        margin: 10px;
+        padding: 10px 15px;
+        margin-right: 0px;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border: 1px solid grey;
+      }
+      .fa-search {
+        color: white;
+        font-size: 20px;
+      }
+      #searchIcon {
+        background-color: #f9ae42;
+        margin: 10px;
+        padding: 10px 15px;
+        margin-right: 0px;
+        margin-left: 0px;
+        border: none;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+      }
+      #popularTest {
+        border: 1px solid green;
+        margin: auto;
+        margin-top: 10px;
+        width: 80%;
+        height: 220px;
+      }
+      .testHeading {
+        border: 1px solid red;
+        text-align: center;
+        font-size: 18px;
+        height: 24%;
+        color: #6c757d;
+      }
+      .typesofTest {
+        height: 50%;
+        border: 1px solid red;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        justify-content: center;
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0px;
+      }
+      .typesofTest > div {
+        width: 18%;
+        height: 30%;
+        color: #503a3a;
+        margin-left: 10px;
+        padding: 4px;
+        border: 1px solid grey;
+        padding: 8px 16px;
+        flex: 0 0 auto;
+        width: auto;
+        max-width: 100%;
+      }
+      .textCenter {
+        text-align: center;
+      }
+
+      .typesofTest > div > :hover {
+        background-color: #16ac99;
+        color: white;
+      }
+      .labTest {
+        background-color: #fff;
+        border-radius: 0.5rem;
+        border: 1px solid #cccaca;
+        cursor: pointer;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+      }
+      #masterCheckup {
+        height: 500px;
+        border: 1px solid blue;
+        margin: auto;
+        display: flex;
+        margin-top: 20px;
+      }
+      .leftCheckupbox {
+        width: 80%;
+        border: 1px solid red;
+        line-height: 45px;
+        padding-left: 2%;
+      }
+      .checkupImgbig {
+        width: 45%;
+        border: 1px solid black;
+      }
+      .leftCheckupbox > div:nth-child(1) {
+        height: 20%;
+        color: #16ac99;
+        width: 100%;
+        font-size: 32px;
+        border: 1px solid rgb(209, 17, 49);
+      }
+      .leftCheckupbox > div:nth-child(2) {
+        padding-top: 8px;
+        color: #6c757d;
+        height: 10%;
+        /* font-weight: 550; */
+        font-size: 16px;
+      }
+      #checkup4box {
+        padding-top: 16px;
+        height: 60%;
+        border: 3px solid yellow;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        justify-content: space-evenly;
+      }
+      .checkupBoxone {
+        border: 1px solid green;
+        width: 20%;
+        height: 45%;
+      }
+
+      .checkupImg {
+        border: 1px solid blue;
+        width: 100%;
+        max-width: 50%;
+        max-height: 60%;
+        vertical-align: middle;
+        margin-bottom: 10px;
+        margin: auto;
+      }
+      .checkupText {
+        color: #503a3a;
+        /* margin: 0px; */
+        height: 40%;
+        font-size: 14px;
+        border: 1px solid brown;
+        text-align: center;
+        line-height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="mainPage">
+      <!-- starting of search bar -->
+      <div class="firstHalf">
+        <div id="searchBar">
+          <input
+            class="searchText"
+            type="text"
+            placeholder="Search lab test. E.g. CBC, TSH, etc"
+          />
+          <button id="searchIcon" type="submit">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <!-- ending of search bar -->
+
+        <!-- starting of popular tests box -->
+
+        <div id="popularTest">
+          <div class="testHeading">
+            <h2>Popular tests</h2>
+          </div>
+          <div class="typesofTest">
+            <div>
+              <a href="" class="labTest">
+                <span>CBC</span>
+              </a>
+            </div>
+            <div>
+              <a href="" class="labTest">
+                <span>Thyroid Profile</span>
+              </a>
+            </div>
+            <div>
+              <a href="" class="labTest">
+                <span>Hba1C - Hemoglobin</span>
+              </a>
+            </div>
+            <div>
+              <a href="" class="labTest">
+                <span>Cholestrol - Lipid Profile</span>
+              </a>
+            </div>
+            <div>
+              <a href="" class="labTest">
+                <span>Premartial Profile</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- ending of popular tests box -->
+
+        <!-- starting of master help Checkups -->
+
+        <div id="masterCheckup">
+          <div class="leftCheckupbox">
+            <div>Master health checkups at your home anytime</div>
+            <div>No queues. No travel. Everything done at home</div>
+            <div id="checkup4box">
+              <div class="checkupBoxone">
+                <div class="checkupImg">
+                  <img
+                    src="https://www.pulseplus.in/content/images/lab/choose-package.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="checkupText">
+                  <p>Choose a package</p>
+                </div>
+              </div>
+              <div class="checkupBoxone">
+                <div class="checkupImg">
+                  <img
+                    src="https://www.pulseplus.in/content/images/lab/select-date.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="checkupText">
+                  <p>Select date and time</p>
+                </div>
+              </div>
+              <div class="checkupBoxone">
+                <div class="checkupImg">
+                  <img
+                    src="https://www.pulseplus.in/content/images/lab/sample-collected.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="checkupText">
+                  <p>Sample is collected from your home</p>
+                </div>
+              </div>
+              <div class="checkupBoxone">
+                <div class="checkupImg">
+                  <img
+                    src="https://www.pulseplus.in/content/images/lab/report-email.png"
+                    alt=""
+                    width="100%"
+                    height="100%"
+                  />
+                </div>
+                <div class="checkupText">
+                  <p>Report is emailed to you</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="checkupImgbig"></div>
+        </div>
+        <!-- ending of master help Checkups -->
+      </div>
+    </div>
+  </body>
+</html>
