@@ -66,6 +66,9 @@
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
       }
+      #searchIcon:hover {
+        cursor: pointer;
+      }
       #popularTest {
         border: 1px solid green;
         margin: auto;
@@ -140,7 +143,7 @@
       }
       .checkupImgbig {
         width: 45%;
-        border: 1px solid black;
+        border: 2px solid black;
       }
       .leftCheckupbox > div:nth-child(1) {
         height: 20%;
@@ -160,15 +163,14 @@
         padding-top: 16px;
         height: 60%;
         border: 3px solid yellow;
-        display: flex;
-        flex-wrap: wrap;
+        display: grid;
+        grid-template-columns: repeat(4, 20%);
         justify-content: center;
         justify-content: space-evenly;
+        grid-gap: 10px;
       }
       .checkupBoxone {
         border: 1px solid green;
-        width: 20%;
-        height: 45%;
       }
 
       .checkupImg {
@@ -304,10 +306,13 @@
               </div>
             </div>
           </div>
-          <div class="checkupImgbig"></div>
+          <div class="checkupImgbig">
+            <img src="doctor.png.jpeg" alt="" width="100%" height="100%" />
+          </div>
         </div>
         <!-- ending of master help Checkups -->
       </div>
     </div>
   </body>
 </html>
+<!-- fhgjk -->
