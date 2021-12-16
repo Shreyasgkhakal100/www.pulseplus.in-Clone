@@ -96,7 +96,7 @@ function showCartData(cartData){
                 //setting up third div
                 increaseQty.append(function(){
                     for(i=1; i<=100; i++){
-                        
+
                     }
                 });
 
@@ -111,3 +111,11 @@ function showCartData(cartData){
 function deleteFromCart(index){
     //writ code to delete element from cart.
 }
+
+
+
+
+//navBar Js 
+document.getElementById("navLocation").addEventListener("click", function(){
+    window.location.href = "#locationSelector";
+})
