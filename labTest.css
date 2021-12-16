@@ -12,12 +12,12 @@ body {
   .firstHalf {
     width: 75%;
     margin: auto;
-    /* border: 1px solid green; */
+    border: 1px solid green;
     background-color: white;
   }
 
   #searchBar {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     margin: 2px;
     margin: auto;
     margin-top: 7%;
@@ -53,14 +53,14 @@ body {
     border-bottom-right-radius: 4px;
   }
   #popularTest {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     margin: auto;
     margin-top: 10px;
     width: 80%;
     height: 220px;
   }
   .testHeading {
-    /* border: 1px solid red; */
+    border: 1px solid red;
     text-align: center;
     font-size: 18px;
     height: 24%;
@@ -68,7 +68,7 @@ body {
   }
   .typesofTest {
     height: 50%;
-    /* border: 1px solid red; */
+    border: 1px solid red;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -84,7 +84,7 @@ body {
     color: #503a3a;
     margin-left: 10px;
     padding: 4px;
-    /* border: 1px solid grey; */
+    border: 1px solid grey;
     padding: 8px 16px;
     flex: 0 0 auto;
     width: auto;
@@ -114,21 +114,21 @@ body {
   }
   #masterCheckup {
     height: 400px;
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     margin: auto;
     display: flex;
     margin-top: 20px;
   }
   .leftCheckupbox {
     width: 80%;
-    /* border: 5px solid red; */
+    border: 5px solid red;
     line-height: 45px;
     padding-left: 2%;
   }
   .checkupImgbig {
     width: 45%;
     height: 90%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 
   }
   .leftCheckupbox > div:nth-child(1) {
@@ -136,7 +136,7 @@ body {
     color: #16ac99;
     width: 100%;
     font-size: 32px;
-    /* border: 2px solid rgb(209, 17, 49); */
+    border: 2px solid rgb(209, 17, 49);
     line-height: 39px;
   }
   .leftCheckupbox > div:nth-child(2) {
@@ -145,25 +145,25 @@ body {
     height: 10%;
     font-weight: 550;
     font-size: 16px;
-    /* border: 3px solid green; */
+    border: 3px solid green;
   }
   #checkup4box {
     padding-top: 16px;
     height: 60%;
-    /* border: 3px solid yellow; */
+    border: 3px solid yellow;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     justify-content: space-evenly;
   }
   .checkupBoxone {
-    /* border: 1px solid green; */
+    border: 1px solid green;
     width: 20%;
     height: 85%;
   }
 
   .checkupImg {
-    /* border: 1px solid blue; */
+    border: 1px solid blue;
     width: 100%;
     max-width: 50%;
     max-height: 60%;
@@ -177,14 +177,14 @@ body {
     margin: 0px;
     height: 40%;
     font-size: 14px;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     text-align: center;
     line-height: 20px;
   }
   #hyperTension{
       margin: auto;
       height: 500px;
-      /* border: 1px solid blue; */
+      border: 1px solid blue;
       margin-top: 20px;
       display: grid;
       grid-template-columns: repeat(3,1fr);
@@ -192,12 +192,12 @@ body {
       margin-left: 5px;
   }
   .plans{
-      /* border: 1px solid purple; */
+      border: 1px solid purple;
   }
   
   .plans>div:nth-child(1){
       height: 18%;
-      /* border: 1px solid red; */
+      border: 1px solid red;
       display: block;
       background-color: #17aa99;
       background-image: url("https://www.pulseplus.in/content/images/lab/health-checkup.png");
@@ -212,10 +212,10 @@ body {
 } */
 .plans>div:nth-child(3){
     height: 30%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 .plans>div:nth-child(4){
-    height: 16%;
+    height: 14%;
     background-color: #e3e3e3;
     text-align: center;
 }
@@ -230,11 +230,11 @@ body {
 .imageAndtext{
     display: flex;
     height: 30%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 .imageAndtext>div:nth-child(1){
     width: 22%;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     margin-left: auto;
     margin-right: auto;
     margin-left: 4%;
@@ -242,7 +242,7 @@ body {
 }
 .imageAndtext>div:nth-child(2){
     width: 71%;
-    /* border: 1px solid brown; */
+    border: 1px solid brown;
     margin-left: 5%;
     margin-top: 5%;
 }
@@ -263,7 +263,7 @@ body {
 }
 
 .plansText2>div:nth-child(1){
-   /* border: 1px solid green; */
+   border: 1px solid green;
    width: 22%;
    margin-left: auto;
     margin-right: auto;
@@ -271,7 +271,7 @@ body {
     margin-top: 20px;
 }
 .plansText2>div:nth-child(2){
-    /* border: 1px solid pink; */
+    border: 1px solid pink;
     width: 71%;
     margin-left: 5%;
     margin-top: 20px;
@@ -319,11 +319,26 @@ body {
      text-decoration: line-through;
      color: #a19f9f;
  }
+ #addtoCart{
+   background-color: #f9ae42;
+   border: none;
+ }
+ #addtoCart:hover{
+   cursor: pointer;
+ }
+ #gotoCart{
+  background-color: #f9ae42;
+  border: none;
+  height: 20%;
+ }
+ #gotoCart:hover{
+  cursor: pointer;
+}
 
 #price>div:nth-child(3){
-    width: 18%;
+    width: 25%;
     height: 24%;
-    margin-left: 22%;
+    margin-left: 13%;
    color: white;
    background-color: #f9ae42;
     border-color: #f9ae42;
@@ -343,7 +358,7 @@ body {
 #homeSample{
   margin-top: 20px;
   height: 260px;
-  /* border: 1px solid grey; */
+  border: 1px solid grey;
   display: grid;
   grid-template-columns: 32% 18% 18% 32%;
 }
@@ -356,7 +371,7 @@ body {
   text-align: center;
   padding: 4%;
   height: 40%;
-  /* border: 2px solid black; */
+  border: 2px solid black;
   max-width: 111px;
   margin-left: 40%;
 }
@@ -364,7 +379,7 @@ body {
   height: 40%;
   text-align: center;
   font-size: 22px;
-  /* border: 1px solid green; */
+  border: 1px solid green;
   color: #955c48;
   margin-bottom: 10px;
 }
@@ -375,4 +390,13 @@ body {
 }
 #lastImage{
   margin-right: 80%;
+}
+
+#information{
+  height: 300px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+}
+#information>div{
+  border: 2px solid blue;
 }
