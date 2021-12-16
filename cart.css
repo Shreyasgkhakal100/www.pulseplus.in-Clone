@@ -147,6 +147,9 @@ body{
     margin: auto;
     margin-top: 0px;
 }
+#bgImageDiv img{
+    margin-top: 80px;
+}
 #bgImageDiv>:nth-child(2){
     width: 60%;
     height: 50px;
@@ -194,3 +197,4 @@ img{
 h2{
     color: #16ac99;
 }
+

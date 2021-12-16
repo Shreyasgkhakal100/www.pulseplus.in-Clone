@@ -1,5 +1,47 @@
 var container = document.getElementById('container');
-cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+cartData = JSON.parse(localStorage.getItem("cartData")) || [
+    {
+        proid:1,
+        name:"A Clav 625 mg Tablet",
+        location:"Capital Pharma",
+        price:195.00,
+        off:20,
+        cou:0,
+        catg:"Weight Management",
+        instock:9,
+        avail:"Instock",
+        imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+        Packing: "6 Tablets / Strip",
+        pruductdetailes:{
+            SKU: 'PC-1211',
+            ProductDescription: 'A Clav 625 mg Tablet is manufactured by Capital Pharma',
+            Packing: 'Strip',
+            Condition: 'New',
+            Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+        }
+    },
+    {
+        proid:2,
+        name:"A Daxid L Tablet",
+        location:"A Daxid L Tablet",
+        price:50.00,
+        off:5.00,
+        cou:0,
+        catg:"Beauty",
+        instock:3,
+        avail:"Out of Stock",
+        imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+        Packing: "10 Tablets / Strip",
+        pruductdetailes:{
+            SKU: 'PC-44563',
+            ProductDescription: 'A Daxid L Tablet is manufactured by Eskon Pharma',
+            Packing: 'Strip',
+            Condition: 'New',
+            Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+            
+        } 
+    }
+    ];
 
 showCartData(cartData);
 function showCartData(cartData){
@@ -96,7 +138,7 @@ function showCartData(cartData){
                 //setting up third div
                 increaseQty.append(function(){
                     for(i=1; i<=100; i++){
-
+                        
                     }
                 });
 
