@@ -1,0 +1,11 @@
+#mainContent{
+    border: 1px solid black;
+    display: flex;
+    width: 70%;
+    margin: auto;
+}
+#mainContent>div{
+    border: 1px solid green;
+    margin: 20px;
+    width: 31%;
+}
