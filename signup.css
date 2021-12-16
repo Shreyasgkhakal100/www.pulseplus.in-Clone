@@ -1,12 +1,16 @@
 *{
     font-family: "Roboto",sans-serif;
 }
+body{
+    background-image: url("backgroundImage.png");
+}
 #card{
     margin: auto;
     margin-top: 2%;
     max-width: 480px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 30px;
+    background-color: white;
 }
 input{
     padding: 6px 80px 4px 4px;
@@ -28,6 +32,7 @@ h2{
 #loginForm{
     max-width: 380px;
     margin: auto;
+    
 }
 #number{
     width: 100%;
@@ -106,7 +111,4 @@ a{
 .policy{
     color: #969292;
 }
-.hidden{
-    visibility: hidden;
-    margin-top: 0px;
-}
+
