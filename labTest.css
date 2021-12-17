@@ -379,7 +379,7 @@ a{
 
   }
   .powerByDiv{
-      /* border: 1px solid blue; */
+      border: 1px solid blue;
       display: grid;
       grid-template-columns: 30% 65%;
   }
@@ -654,3 +654,6 @@ box-shadow: #d8faf5 5px 5px 5px 5px;
 div{
   display: block;
 }
+div{
+    display: block;
+  }
