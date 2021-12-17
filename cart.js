@@ -18,7 +18,8 @@ cartData = JSON.parse(localStorage.getItem("cartData")) || [
             Packing: 'Strip',
             Condition: 'New',
             Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
-        }
+        },
+        quantity:1
     },
     {
         proid:2,
@@ -39,17 +40,146 @@ cartData = JSON.parse(localStorage.getItem("cartData")) || [
             Condition: 'New',
             Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
             
-        } 
+        },
+        quantity:2
     }
     ];
 
-showCartData(cartData);
-function showCartData(cartData){
+    var extraProd = [
+        {
+            proid:1,
+            name:"A Clav 625 mg Tablet",
+            location:"Capital Pharma",
+            price:195.00,
+            off:20,
+            cou:0,
+            catg:"Weight Management",
+            instock:9,
+            avail:"Instock",
+            imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+            Packing: "6 Tablets / Strip",
+            pruductdetailes:{
+                SKU: 'PC-1211',
+                ProductDescription: 'A Clav 625 mg Tablet is manufactured by Capital Pharma',
+                Packing: 'Strip',
+                Condition: 'New',
+                Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+            }
+        },
+        {
+            proid:2,
+            name:"A Daxid L Tablet",
+            location:"A Daxid L Tablet",
+            price:50.00,
+            off:5.00,
+            cou:0,
+            catg:"Beauty",
+            instock:3,
+            avail:"Out of Stock",
+            imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+            Packing: "10 Tablets / Strip",
+            pruductdetailes:{
+                SKU: 'PC-44563',
+                ProductDescription: 'A Daxid L Tablet is manufactured by Eskon Pharma',
+                Packing: 'Strip',
+                Condition: 'New',
+                Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+                
+            } 
+        },
+        
+            {
+                proid:3,
+                name:"Aaranac P Tablet",
+                location:"Aaranac P Tablet",
+                imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+                price:37.50,
+                off:5.00,
+                cou:0,
+                catg:"Beauty",
+                instock:4,
+                avail:"In Stock",
+                Packing: "10 Tablets / Strip",
+                pruductdetailes:{
+                    SKU: 'PC-2065',
+                    ProductDescription: 'Aaranac P Tablet is manufactured by Aara Life Sciences (I) Pvt Ltd',
+                    Packing: 'Strip',
+                    Condition: 'New',
+                    Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+                    
+                } 
+            },
+            {
+                proid:4,
+                name:"Gabagesic Gel 30 gm",
+                location:"Crescent Therapeutics Ltd",
+                price:232.80,
+                off:0,
+                cou:0,
+                catg:"Medical Device",
+                instock:3,
+                avail:"In Stock",
+                imgs:"https://media.istockphoto.com/vectors/pill-bottle-with-pills-vector-id459969585?k=6&m=459969585&s=612x612&w=0&h=ZyDyz05L-WMSSCs8v8RBxw4mZ-byXDiy008yAyNAv20=",
+                Packing: "Tube",
+                pruductdetailes:{
+                    SKU: 'PC-15264',
+                    ProductDescription: 'Gabagesic Gel 30 gm is manufactured by Linux Laboratories',
+                    Packing: 'Tube',
+                    Condition: 'New',
+                    Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+                    
+                } 
+            },
+            {
+                proid:5,
+                name:"Gabarich 150 mg Tablet",
+                location:"Crescent Therapeutics Ltd",
+                price:98.62,
+                off:0,
+                cou:0,
+                catg:"Ayurveda",
+                instock:1,
+                avail:"In Stock",
+                imgs:"https://th.bing.com/th/id/OIP.59U8Ip0sA2No8W6qp-C-1AHaHa?pid=ImgDet&w=511&h=512&rs=1",
+                Packing: "10 Tablets / Strip",
+                pruductdetailes:{
+                    SKU: 'SKU: PC-14550',
+                    ProductDescription: 'Gabarich 150 mg Tablet is manufactured by Crescent Therapeutics Ltd',
+                    Packing: 'Strip',
+                    Condition: 'New',
+                    Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+                    
+                } 
+            },
+            {
+                proid:6,
+                name:"Macbery PD Syrup",
+                location:"Macleods Pharmaceuticals Pvt Ltd",
+                price:62.40,
+                off:5.00,
+                cou:0,
+                catg:"Ayurveda",
+                instock:10,
+                avail:"In Stock",
+                imgs:"https://media.istockphoto.com/vectors/pill-bottle-with-pills-vector-id459969585?k=6&m=459969585&s=612x612&w=0&h=ZyDyz05L-WMSSCs8v8RBxw4mZ-byXDiy008yAyNAv20=",
+                Packing: "Macbery PD Syrup is manufactured by Macleods Pharmaceuticals Pvt Ltd",
+                pruductdetailes:{
+                    SKU: 'PC-53321',
+                    ProductDescription: 'Macbery PD Syrup is manufactured by Macleods Pharmaceuticals Pvt Ltd',
+                    Packing: 'Macbery PD Syrup is manufactured by Macleods Pharmaceuticals Pvt Ltd',
+                    Condition: 'New',
+                    Soldby: 'Pulse Pharmacy India Pvt. Ltd.'
+                    
+                } 
+            }
+    ];
 
+showCartData(cartData, extraProd);
+function showCartData(cartData, extraProd){
+        
+            container.innerHTML = "";
     
         if(cartData.length===0){
-            container.innerHTML = "";
-
             //if elements is not present in cartData then do this.
             var bgImage = document.createElement("img");
             var bgImageDiv = document.createElement("div");
@@ -105,49 +235,197 @@ function showCartData(cartData){
 
             //showing all the products present in the cart in leftDiv part.
 
+            var totalSum = 0;
             cartData.map(function(element, index) {
+
+                //calculating totalSum
+                totalSum += element.price*element.quantity;
+
                 var row = document.createElement("div");
 
                 var firstDiv = document.createElement("div");
                 var prodImg = document.createElement("img");
+
                 var secondDiv = document.createElement("div");
                 var title = document.createElement("p");
                 var divUnderSecondDiv = document.createElement("div");
                 var price = document.createElement("p");
                 var deleteBtn = document.createElement("button");
+
                 var thirdDiv = document.createElement("div");
-                var increaseQty = document.createElement("select");
+                var divUnderThirdDiv = document.createElement("div");
+                var increaseQty = document.createElement("div");
+                var quantity = document.createElement("p");
+                var decreaseQty = document.createElement("div")
                 var finalPrice = document.createElement("p");
 
                 //setting up first div
-                prodImg.setAttribute("src", element.imgUrl);
+                prodImg.setAttribute("src", element.imgs);
                 firstDiv.appendChild(prodImg);
+                firstDiv.setAttribute("class", "firstDiv");
 
                 //setting up second div
-                title.textContent = element.title;
+                title.textContent = element.name;
                 divUnderSecondDiv.setAttribute("class", "priceAndButtonDiv");
-                price.textContent = element.price;
-                deleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>'
+                price.textContent = "₹ " + element.price;
+                deleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
+                deleteBtn.setAttribute("class", "deleteBtn");
                 deleteBtn.addEventListener("click", function(){
                     deleteFromCart(index);
                 });
-
                 divUnderSecondDiv.append(price, deleteBtn);
                 secondDiv.append(title, divUnderSecondDiv);
+                secondDiv.setAttribute("class","secondDiv");
 
                 //setting up third div
-                increaseQty.append(function(){
-                    for(i=1; i<=100; i++){
-                        
-                    }
+                increaseQty.textContent = "+";
+                increaseQty.setAttribute("class", "increaseQty");
+                quantity.textContent = element.quantity;
+                decreaseQty.textContent = "-";
+                decreaseQty.setAttribute("class","decreaseQty");
+                increaseQty.addEventListener("click", function(){
+                    increaseQuantity(index);
                 });
+                decreaseQty.addEventListener("click", function(){
+                    decreaseQuantity(index);
+                });
+                divUnderThirdDiv.setAttribute("class", "divUnderThirdDiv");
+                divUnderThirdDiv.append(decreaseQty, quantity, increaseQty);
+                finalPrice.textContent = "₹ " +  element.price*element.quantity + " only";
+                thirdDiv.append(divUnderThirdDiv, finalPrice);
+                thirdDiv.setAttribute("class","thirdDiv");
 
-
-
+                //appending Elements.
+                row.setAttribute("class", "cartRow");
+                row.append(firstDiv, secondDiv, thirdDiv);
+                cartProducts.append(row);
             });
 
+            //setting up classes & Ids to the elements to provide css.
+            cartProducts.setAttribute("class", "cartProducts")
+            leftDiv.setAttribute("class", "leftDiv");
+            rightDiv.setAttribute("class", "rightDiv");
+            mainDiv.setAttribute("id","mainDiv");
 
+            //add Medicines button,
+            addMedicineBtn.textContent = "+ Add Medicines";
+            addMedicineBtn.addEventListener("click", function(){
+                window.location.href = "#"
+            });
+            addMedicineBtn.setAttribute("id", "addMedicineBtn")
+            
+            //add more product to cart wala section.
+             extraProd.map(function(element, index){
+                var box = document.createElement("div");
+                var inBoxDiv1 = document.createElement("div");
+                var prodImage = document.createElement("img");
+                var inBoxDiv2 = document.createElement("div");
+                var prodTitle = document.createElement("p");
+                var prodPrice = document.createElement("p");
+                var addBtn = document.createElement("button");
+
+                prodImage.setAttribute("src", element.imgs);
+                inBoxDiv1.appendChild(prodImage);
+
+                prodTitle.textContent = element.name;
+                prodPrice.textContent = "₹ " + element.price;
+                addBtn.textContent = "+ ADD";
+                addBtn.addEventListener("click", function(){
+                    addToCart(index);
+                });
+                addBtn.setAttribute("id", "addBtn");
+                inBoxDiv2.append(prodTitle, prodPrice, addBtn);
+
+                box.setAttribute("class", "prodBox");
+                box.append(inBoxDiv1, inBoxDiv2);
+                productsSlider.append(box);
+             });
+
+             productsSlider.setAttribute("id","productsSlider");
+
+            
+
+            //left div ends here now right Div is starting from here.
+            //freeOrderBtn
+            freeOrderBtn.innerHTML = "Free For Orders Above 1000 >"
+            freeOrderBtn.addEventListener("click", function(){
+                window.location.href = "#";
+            })
+            freeOrderBtn.setAttribute("id", "freeOrderBtn");
+            rightDiv.append(freeOrderBtn);
+
+            //applyCouponBtn
+            applyCouponBtn.innerHTML = '<img src="https://www.pulseplus.in/content/images/icons/sale.png"/><p>Apply Coupon</p>';
+            applyCouponBtn.addEventListener("click", function(){
+                //code for applyCouponBtn
+                prompt("Please Put Coupon Code Here And Click on Ok");
+
+            });
+            applyCouponBtn.setAttribute("id", "applyCouponBtn");
+            rightDiv.append(applyCouponBtn);
+
+            //orderSummaryDiv
+            var table = document.createElement("table");
+            var thead = document.createElement("thead");
+            var tr1 = document.createElement("tr");
+            var th11 = document.createElement("td");
+            var tbody = document.createElement("tbody");
+            var tr2 = document.createElement("tr");
+            var td21 =  document.createElement("td");
+            var td22 = document.createElement("td");
+            var tr3 = document.createElement("tr");
+            var td31 = document.createElement("td");
+            var td32 = document.createElement("td");
+            var tr4 = document.createElement("tr");
+            var td41 = document.createElement("td");
+            var td42 = document.createElement("td");
+            
+            var finalCheckOutValue = totalSum + 15;
+            th11.innerHTML = "<b>Order Summary</b>";
+            tr1.append(th11);
+            thead.append(tr1);
+            td21.innerHTML = "Items";
+            td22.innerHTML = "₹ "+totalSum+".00";
+            tr2.append(td21, td22);
+            td31.innerHTML = "Processing Fee"
+            td32.innerHTML = "₹ 15.00"
+            tr3.append(td31, td32);
+            td41.innerHTML = "<b>Total</b>";
+            td42.innerHTML = "₹ "+finalCheckOutValue+".00";
+            tr4.append(td41, td42);
+            tbody.append(tr2, tr3, tr4);
+            table.append(thead, tbody);
+            orderSummaryDiv.setAttribute("id","orderSummaryDiv")
+            orderSummaryDiv.append(table);
+            rightDiv.append(orderSummaryDiv);
+
+            //proccedBtn
+            proceedBtn.textContent = "PROCEED";
+            proceedBtn.setAttribute("id", "proceedBtn");
+            proceedBtn.addEventListener("click", function(){
+                window.location.href = "deliverydetails.html"
+            })
+            rightDiv.append(proceedBtn);
+
+
+             //appending sub parts to the main elements.
+            leftDiv.append(cartProducts, addMedicineBtn, productsSlider);
+            mainDiv.append(leftDiv, rightDiv);
+            container.append(pageHeading, mainDiv);
         }
+}
+
+function addToCart(index){
+
+}
+
+
+function increaseQuantity(index){
+
+}
+
+function decreaseQuantity(index){
+
 }
 
 function deleteFromCart(index){
