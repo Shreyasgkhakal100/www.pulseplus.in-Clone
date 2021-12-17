@@ -335,11 +335,11 @@ a{
     width: 33%;
     box-shadow: #d8faf5 5px 5px 5px 5px;
   }
-  .plansHeading{
-  }
-  .planCard{
-      /* border: 1px solid green; */
-  }
+  /* .plansHeading{
+  } */
+  /* .planCard{
+      border: 1px solid green;
+  } */
   .planHeadingDiv{
       /* border: 1px solid red; */
       text-align: right;
@@ -388,9 +388,9 @@ a{
     margin-top: 15%;
     padding-left: 5%;
   }
-  .textDiv2{
-    /* border: 1px solid red; */
-  }
+  /* .textDiv2{
+    border: 1px solid red;
+  } */
 .text2{
     position: relative;
     font-weight: 500;
