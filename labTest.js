@@ -170,7 +170,6 @@ function addToCart(index){
         {
             document.querySelector("#cartGo").textContent = "Go to cart";
             alert("Item successfully added to cart")
-        
             
         }
     }
