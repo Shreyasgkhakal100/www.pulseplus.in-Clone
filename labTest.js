@@ -13,6 +13,7 @@ var plans =[
         PoweredBy: "Thyrocare",
         time:"24 hrs",
         price:1100,
+        imgs:"https://www.pulseplus.in/content/images/lab/lab-icon-1.png"
     
     },
     {
@@ -20,14 +21,16 @@ var plans =[
         tests:["Aldosterone","Cortisol","Cholesterol tests"],
         PoweredBy: "Thyrocare",
         time:"24 hrs",
-        price:4000
+        price:4000,
+        imgs:"https://www.pulseplus.in/content/images/lab/lab-provider-icon.png"
     },
     {
         name:"Complete Master Health Checkup",
         tests:["Thyroid Profile","Renal profile","Liver function tests"],
         PoweredBy: "Thyrocare",
         time:"24 hrs",
-        price:3400
+        price:3400,
+        imgs:"https://www.pulseplus.in/content/images/lab/lab-provider-icon.png"
     }
 ]
 
