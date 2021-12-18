@@ -2,7 +2,7 @@
     font-family: "Roboto",sans-serif;
 }
 body{
-    background-image: url("backgroundImage.png");
+    background-image: url("https://www.pulseplus.in/content/images/icons/bg.png");
 }
 #card{
     margin: auto;
@@ -65,7 +65,7 @@ input:focus{
     border-color: #007BFF;
 }
 button{
-    background-color: #ffc107;
+    background-color: #f9ae42;;
     color: white;
     padding: 14px 20px;
     border: none;
@@ -74,6 +74,7 @@ button{
     opacity: 0.9;
     font-size: 18px;
     border-radius: 3px;
+    border-radius: 4px;
 }
 button:hover {
     opacity:1;
