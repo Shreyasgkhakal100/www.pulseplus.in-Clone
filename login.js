@@ -1,6 +1,7 @@
 document.querySelector("button").addEventListener("click", signIn);
 var regdUsers = JSON.parse(localStorage.getItem("database"));
-function signIn() {
+function signIn(event) {
+    event.preventDefault();
     var email = document.querySelector("#email").value;
     var password = document.querySelector("#password").value;
     flag = false;

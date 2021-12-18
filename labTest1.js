@@ -147,7 +147,6 @@ function showPlans(plans) {
 
 
 
-document.querySelector("#cartGo").textContent = "";
 
 cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 

@@ -236,7 +236,7 @@ img {
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 55%;
+  top: 62%;
   width: auto;
   padding: 16px;
   margin-top: -22px;
@@ -264,6 +264,7 @@ img {
 #eachSlideDiv{
     display: flex;
 }
+
 
 /* The dots/bullets/indicators */
 .dot {
@@ -396,7 +397,7 @@ img {
 }
 .footer{
     /* border: 1px solid black; */
-    width: 50%;
+    width: 68%;
     height: 200px;
     margin: auto;
     margin-top: 20px;

@@ -266,7 +266,7 @@ function showCartData(cartData, extraProd){
             //add Medicines button,
             addMedicineBtn.textContent = "+ Add Medicines";
             addMedicineBtn.addEventListener("click", function(){
-                window.location.href = "#"
+                window.location.href = "ProductPage.html"
             });
             addMedicineBtn.setAttribute("id", "addMedicineBtn")
             
@@ -371,7 +371,7 @@ function showCartData(cartData, extraProd){
                 orderSummaryDiv.append(table);
                 rightDiv.append(orderSummaryDiv);
             }else{
-                var finalCheckOutValue = totalSum*0.7 + 15;
+                var finalCheckOutValue = Math.floor(totalSum*0.7 + 15);
                 th11.innerHTML = "<b>Order Summary</b>";
                 tr1.append(th11);
                 thead.append(tr1);

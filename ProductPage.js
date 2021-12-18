@@ -417,7 +417,7 @@ var mdata=[
 ]
 
 
-var cartarr=JSON.parse(localStorage.getItem("cartData"))||[];
+var cartData=JSON.parse(localStorage.getItem("cartData"))||[];
 updateCart(); 
 
 actuallPro(mdata)
@@ -453,7 +453,7 @@ function lowToHigh(){
 }
 function actuallPro(mdata){
     document.getElementById("prod").textContent=""
-mdata.map(function(elem){
+mdata.map(function(elem, index){
     if(elem.off>0){
         msdiv=document.createElement("div")
         msdiv.setAttribute("id","msdiv")
@@ -545,7 +545,7 @@ mdata.map(function(elem){
     var pro=elem.proid
     bute.addEventListener("click",function(){
         
-            getIt(elem.proid)
+            getIt(index)
         
       })
    
@@ -567,22 +567,26 @@ mdata.map(function(elem){
 )
 
 }
-function getIt(pro){
-    if(cartarr.some((item)=>item.proid===pro)){
-        alert("Product Already In Cart")
+function getIt(index){
+   var isPresent = false;
+    cartData.map(function(element){
+        if(mdata[index]===element){
+            isPresent = true;
+        }
+    });
+    if(isPresent){
+        alert("The Product Is Already In Cart. You Can Increase Its Quantity There. Click Ok to go In Cart");
+        window.location.href = "cart.html";
     }else{
-   var item=mdata.find((mdata)=>mdata.proid===pro);
-    alert("Product Added Successfully")
-    document.getElementById("cartvalue").textContent=cartarr.length
-   cartarr.push({
-     ...item,
-     numofpro:1  
-   })
-}
+    mdata[index].quantity = 1;
+    cartData.push(mdata[index]);
+    alert("The Product Is Successfully Added In Cart");
+    localStorage.setItem("cartData", JSON.stringify(cartData));
+    }
 updateCart();
 }
 function updateCart(){ 
-    localStorage.setItem("cartData",JSON.stringify(cartarr))
+    localStorage.setItem("cartData",JSON.stringify(cartData))
     
 }
 
@@ -607,3 +611,8 @@ function myFunction() {
       }
     }
 }
+
+//navBar Js 
+document.getElementById("navLocation").addEventListener("click", function(){
+    window.location.href = "#locationSelector";
+})
