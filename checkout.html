@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pulse Pharmacy - Cart</title>
+    <title>Pulse Pharmacy - Payment</title>
     <link rel="icon" href="https://www.pulseplus.in/favicon.ico" type="image/x-icon">
 </head>
 <link href="checkout.css" rel="stylesheet" type="text/css">
@@ -36,35 +36,35 @@
                                     </div>
                                     <form>
                                         <div class="formInput">
-                                            <input type="radio" value="New Delhi">
+                                            <input type="radio" value="New Delhi" name="location">
                                             <label>New Delhi</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Mumbai">
+                                            <input type="radio" value="Mumbai" name="location">
                                             <label>Mumbai</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Bengaluru">
+                                            <input type="radio" value="Bengaluru" name="location">
                                             <label>Bengaluru</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Kolkata">
+                                            <input type="radio" value="Kolkata" name="location">
                                             <label>Kolkata</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Chennai">
+                                            <input type="radio" value="Chennai" name="location">
                                             <label>Chennai</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Noida">
+                                            <input type="radio" value="Noida" name="location">
                                             <label>Noida</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Pune">
+                                            <input type="radio" value="Pune" name="location">
                                             <label>Pune</label>
                                         </div>
                                         <div class="formInput">
-                                            <input type="radio" value="Hyderabad">
+                                            <input type="radio" value="Hyderabad" name="location">
                                             <label>Hyderabad</label>
                                         </div>
                                     </form>
@@ -82,7 +82,36 @@
         </div>
     </div>
 
-    <div id="container"></div>
+    <div id="container">
+        <h2>Payment</h2>
+        <div id="mainDiv">
+            <div class="leftDiv">
+                    <div id="bullets">
+                        <div>
+                            <input type="radio" value="Home" id="upi" name="payment" checked><label for="upi">
+                                <img src="https://www.pulseplus.in/content/images/payment/upi.gif" width="30px"/> <b>UPI:-</b> PhonePe, Google Pay, Paytm Wallet
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" value="Work" id="card" name="payment"><label for="card">
+                                <img src="https://www.pulseplus.in/content/images/payment/online-payment.png" width="30px" /> <b>Online Payment:-</b>Powered by PayU
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" value="Other" id="cod" name="payment"><label for="cod">
+                                <b>Cash On Delivery :- </b> Pay At The Time of Delivery
+                            </label>
+                        </div>
+                    </div>
+                    <div id="address">
+                        
+                    </div>
+            </div>
+            <div class="rightDiv">
+
+            </div>
+        </div>
+    </div>
     <br>
     <br>
     <br>
@@ -211,6 +240,7 @@
         </div>
     </div>
 </body>
+
 </html>
 <script src="checkout.js"></script>
 <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>

@@ -137,7 +137,6 @@ body{
 
 #h2 + div{
     display: flex;
-    border: 1px solid red;
 }
 .leftDiv{
     width: 650px;
