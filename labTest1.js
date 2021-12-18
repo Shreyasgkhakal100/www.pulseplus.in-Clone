@@ -4,6 +4,7 @@ document.getElementById("navLocation").addEventListener("click", function(){
 })
 
 
+
 var mainContent = document.getElementById("mainContent");
 
 var plans =[
@@ -148,33 +149,27 @@ function showPlans(plans) {
 
 document.querySelector("#cartGo").textContent = "";
 
-
-var count = 0;
-var cartDatabase = JSON.parse(localStorage.getItem("cartData")) || [];
+cartData = JSON.parse(localStorage.getItem("cartData")) || [];
 
 
 function addToCart(index){
 
 
-    cartDatabase.push(plans[index]);
-    console.log("here")
- localStorage.setItem("cartData", JSON.stringify(cartDatabase));
-
- var cartData = JSON.parse(localStorage.getItem("cartData"));
-    if(cartData.length>0)
-    {
-        count +=1;
-        document.querySelector("#totalItems").textContent = count;
-        // numberOfitemsdata.push(count);
-
-        // console.log("count",count)
-        
-        if(count>=1)
-        {
-            document.querySelector("#cartGo").textContent = "Go to cart";
-            alert("Item successfully added to cart")
-            
+   var isPresent = false;
+    cartData.map(function(element){
+        if(plans[index]===element){
+            isPresent = true;
         }
+    });
+    if(isPresent){
+        alert("The Product Is Already In Cart. You Can Increase Its Quantity There. Click Ok to go In Cart");
+        window.location.href = "cart.html";
+    }else{
+    plans[index].quantity = 1;
+    cartData.push(plans[index]);
+    alert("The Product Is Successfully Added In Cart");
+    localStorage.setItem("cartData", JSON.stringify(cartData));
+        
     }
 
 }

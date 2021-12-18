@@ -148,12 +148,12 @@ function showCartData(cartData, extraProd){
 
             btn1.textContent = "ADD MEDICINES";
             btn1.addEventListener("click",function(){
-                window.location.href = "#"
+                window.location.href = "ProductPage.html"
             });
 
             btn2.textContent = "MY ORDERS";
             btn2.addEventListener("click",function(){
-                window.location.href = "#"
+                window.location.href = "order.html"
             })
 
             
@@ -429,6 +429,7 @@ function addToCart(index){
     }else{
     extraProd[index].quantity = 1;
     cartData.push(extraProd[index]);
+    alert("The Product Is Successfully Added In Cart");
     localStorage.setItem("cartData", JSON.stringify(cartData));
     showCartData(cartData, extraProd);
     }

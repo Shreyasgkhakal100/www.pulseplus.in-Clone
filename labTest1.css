@@ -1,5 +1,3 @@
-
-
 body {
     margin: 0px;
       font-family: "Roboto", sans-serif;
@@ -133,6 +131,30 @@ form{
 a{
     margin-left: 10px;
     margin-right: 0px;
+}
+.goToProduct{
+  background-color: #16ac99;
+    color: white;
+    border-radius: 0.5rem;
+    /* do not remove */
+    border: 1px solid #cccaca;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    display: block;
+    text-decoration: none;
+    width:200px;
+    margin:auto;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.goToProduct:hover{
+  background-color: #fff;
+    color:  #16ac99;
+    border: 1px solid #16ac99;
 }
 
 #cartAdd{
@@ -534,7 +556,6 @@ box-shadow: #d8faf5 5px 5px 5px 5px;
 }
 .secondHalf{
   margin-top: 3%;
-  width: 100%;
   background-color: white;
 }
 

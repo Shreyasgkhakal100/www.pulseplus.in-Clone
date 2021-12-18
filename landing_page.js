@@ -216,10 +216,13 @@ function addToCart(index){
         }
     });
     if(isPresent){
-        alert("The Product Is Already In Cart. You Can Increase Its Quantity There.")
+        alert("The Product Is Already In Cart. You Can Increase Its Quantity There. Click Ok to go In Cart");
+        window.location.href = "cart.html";
     }else{
     extraProd[index].quantity = 1;
     cartData.push(extraProd[index]);
+    
+    alert("The Product Is Successfully Added In Cart");
     localStorage.setItem("cartData", JSON.stringify(cartData));
     }
     
