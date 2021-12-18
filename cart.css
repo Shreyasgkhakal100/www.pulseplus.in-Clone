@@ -137,7 +137,6 @@ body{
 
 #h2 + div{
     display: flex;
-    border: 1px solid red;
 }
 .leftDiv{
     width: 650px;
@@ -146,9 +145,7 @@ body{
     width: 350px;
     margin-left: 20px;
 }
-.cartProducts{
-    
-}
+
 .cartRow{
     display: flex;
     background-color: white;
@@ -164,9 +161,7 @@ body{
 .secondDiv{
     width: 480px;
 }
-.thirdDiv{
 
-}
 .priceAndButtonDiv{
     display: flex;
     margin-top:10px;
@@ -407,9 +402,7 @@ h2{
     color: grey;
     cursor: pointer;
 }
-#menuDivs>div{
 
-}
 #menuDivs>div>h4{
     padding-left: 10px;
     margin-bottom: 10px;
