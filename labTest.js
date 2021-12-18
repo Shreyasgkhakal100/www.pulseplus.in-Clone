@@ -178,7 +178,3 @@ function addToCart(index){
     }
 
 }
-    //  tgjk,.
-function fast(){
-    
-}
