@@ -151,14 +151,13 @@ a{
     margin: auto;
     padding-top: 3%;
     margin-top: 5%;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+   
 }
 .formHeading{
     font-weight: 600;
     color: #333;
     margin: auto;
     font-size: 23px;
-
     text-align: center;
     line-height: 15px;
 }
@@ -185,10 +184,16 @@ a{
     margin-left: 2%;
 }
 #formDetails{
-    /* border: 1px solid red; */
-    height: 100%;
+    background-color: white;
+    border: 1px solid grey;
+    padding: 25px;
+    border-radius: 10px;
+    height: auto;
     width: 100%;
     display: grid;
+}
+#formDetails>form{
+    overflow: hidden;
 }
 #submit{
     width: 50%;

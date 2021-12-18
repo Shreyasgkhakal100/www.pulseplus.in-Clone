@@ -5,7 +5,7 @@ body {
       font-family: "Roboto", sans-serif;
       background-color: #f5f8fa;
       background-color: #f5f8fa;
-      width: 97%;
+      width: 100%;
       margin-right: 0px;
     }
     
@@ -534,6 +534,7 @@ box-shadow: #d8faf5 5px 5px 5px 5px;
 }
 .secondHalf{
   margin-top: 3%;
+  width: 100%;
   background-color: white;
 }
 
