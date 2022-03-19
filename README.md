@@ -3,14 +3,11 @@ www.pulseplus.in Clone - 2nd Unit Project By: Masai Students (Shreyas Khakal, Ga
 
 **Links for reference :**
 
-Front-end Repo Link :
-https://github.com/alokkumar-dev/uniqlo-clone-2.git
-
-Backend Repo Link :
-https://github.com/Shreyasgkhakal100/uniqlo-backend-2.git
+Project Repo Link :
+https://github.com/Shreyasgkhakal100/www.pulseplus.in-Clone
 
 Blog link : 
-https://medium.com/@hgauba4/how-did-our-team-build-the-uniqlo-clone-2-0-5f9afef9c6d0
+https://medium.com/@shreyasgkhakal100/how-we-have-cloned-pulseplus-website-4e8e9a7af04
 
 
 # Technology We Used :computer:
